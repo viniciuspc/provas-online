@@ -2,16 +2,16 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.fiap.bean;
+package br.com.fiap.bean.usuarios;
 
 /**
  *
  * @author Vinicius
  */
 public class usuario {
-    private String login;
-    private String senha;
-    private String nome;
+    private String login = "";
+    private String senha = "";
+    private String nome = "";
     
     /**
      * O id refere-se ao tipo de usuário
@@ -19,7 +19,7 @@ public class usuario {
      * 2-Professor
      * 3-Administrador
      */
-    private int id;
+    private int id = 0;
 
     public int getId() {
         return id;
