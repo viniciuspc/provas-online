@@ -11,18 +11,11 @@ package br.com.fiap.bean.usuarios;
 public class administrador extends usuario {
     
     /**
-     * Adiciona um aluno no banco de dados.
-     * @param a 
+     * Adiciona um usuário qualquer 
+     * pode ser um aluno, professor ou administrador.
+     * @param u 
      */
-    public void criarAluno(aluno a){
-        
-    }
-   
-    /**
-     * Adiciona um professor no banco de dados.
-     * @param p 
-     */
-    public void criarProfessor(professor p){
+    public void adicionarUsuario(usuario u){
         
     }
     

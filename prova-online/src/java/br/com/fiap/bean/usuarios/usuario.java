@@ -4,10 +4,17 @@
  */
 package br.com.fiap.bean.usuarios;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+
+
 /**
  *
  * @author Vinicius
  */
+@ManagedBean(name="usuario")
+@SessionScoped
 public class usuario {
     private String login = "";
     private String senha = "";
@@ -19,14 +26,14 @@ public class usuario {
      * 2-Professor
      * 3-Administrador
      */
-    private int id = 0;
+    private int tipo = 0;
 
-    public int getId() {
-        return id;
+    public int getTipo() {
+        return tipo;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
     }
 
     public String getLogin() {
@@ -54,5 +61,11 @@ public class usuario {
     }
     
     
+    public String validaUsuario(){
+        usuario u = new usuario();
+        u.setSenha(senha);
+        u.setLogin(login);
+        return null;
+    }
     
 }

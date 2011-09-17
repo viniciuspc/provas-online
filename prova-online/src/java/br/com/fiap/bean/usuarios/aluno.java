@@ -10,10 +10,8 @@ package br.com.fiap.bean.usuarios;
  */
 public class aluno extends usuario {
     private double nota;
-    
-    
 
-   
+    
     
     
 }
