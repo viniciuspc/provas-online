@@ -4,13 +4,57 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.prime.com.tr/ui">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu_style.css" />
     <h:head>
         <title>Login</title>
     </h:head>
     <h:body>
         <div id="wrap">
-            <div id="top"></div>
+            <div id="top"><!-- Não inserir conteúdo aqui --></div>
             <div id="content">
+                
+                <div class="header">
+                    <div id="logo"><img src="css/images/prova.png" /></div>    
+                    <h1>Provas Online</h1>
+                    <h2>Restrito a Professores e Alunos</h2>
+                </div>
+                <div class="breadcrumbs">
+                    <div class="menu">
+                    <ul>
+                        <li><a href="index.xhtml" target="_self" >Home</a>
+                            <ul>
+                                <li><a href="index.xhtml" target="_self">Home</a></li>
+                                <li><a href="" target="_self">Alunos</a></li>
+                                <li><a href="" target="_self">Professores</a></li>
+                                <li><a href="" target="_self">Administrador</a></li>
+                                <li><a href="" target="_self">Provas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="" target="_self" >Professores</a>
+                            <ul>
+                                <li><a href="" target="_self">Cadastrar questões</a></li>
+                                <li><a href="" target="_self">Nota de alunos</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" target="_self" >Alunos</a>
+                            <ul>
+                                <li><a href="" target="_self">Fazer prova</a></li>
+                                <li><a href="" target="_self">Verificar notas</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" target="_self" >Administrador</a>
+                            <ul>
+                                <li><a href="" target="_self">Cadastrar Usuário</a></li>
+                                <li><a href="" target="_self">Cadastrar Curso</a></li>
+                                <li><a href="" target="_self">Cadastrar Matéria</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </div>    
+                </div>
+                <div>
                 <h:form>
                     <p:panel header="Login" style="margin-bottom:10px;">
                         Login: <p:inputText value="#{usuario.login}"/><br/>
@@ -24,10 +68,10 @@
                         Senha: <h:outputText value="#{usuario.senha}"/>
                     </p:panel>
                 </h:form>
+                </div>    
             </div>
-            <div id="bottom"></div>    
+            
+            <div id="bottom"><!-- Não inserir conteúdo aqui --></div>    
         </div>
-        
     </h:body>
 </html>
-
