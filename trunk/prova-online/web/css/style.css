@@ -100,4 +100,14 @@ background: #85ACF7 url('images/hidr.jpg');
 	color: #666;
 }
 
+#logo{
+ 
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
 
+#logo img{
+    width: 80%;
+    height: 90%;
+}
