@@ -6,10 +6,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/menu_style.css" />
     <h:head>
-        <title>Login</title>
+        <title>Área do Professor</title>
     </h:head>
     <h:body>
-       
         <div id="wrap">
             <div id="top"><!-- Não inserir conteúdo aqui --></div>
             <div id="content">
@@ -17,7 +16,7 @@
                 <div class="header">
                     <div id="logo"><img src="css/images/prova.png" /></div>    
                     <h1>Provas Online</h1>
-                    <h2>Restrito a Professores e Alunos</h2>
+                    <h2>Área do Professor</h2>
                 </div>
                 <div class="breadcrumbs">
                     <div class="menu">
@@ -37,42 +36,15 @@
                                 <li><a href="" target="_self">#{label.nota_alunos}</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="" target="_self" >#{label.alunos}</a>
-                            <ul>
-                                <li><a href="" target="_self">#{label.fazer}</a></li>
-                                <li><a href="" target="_self">#{label.notas}</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="" target="_self" >#{label.administrador}</a>
-                            <ul>
-                                <li><a href="" target="_self">#{label.cadastraru}</a></li>
-                                <li><a href="" target="_self">#{label.cadastrarc}</a></li>
-                                <li><a href="" target="_self">#{label.cadastrarm}</a></li>
-                            </ul>
-                        </li>
                     </ul>
                     </div>    
                 </div>
                 <div>
-                <h:form>
-                    <p:panel header="Login" style="margin-bottom:10px;">
-                        Login: <p:inputText value="#{usuario.login}"/><br/>
-                        #{label.senha} <p:password value="#{usuario.senha}" minLength="3" feedback="false"/><br/>
-                        <p:commandButton value="#{label.enviar}" action="#{usuario.validaUsuario()}" ajax="false"  />
-                    </p:panel>
-                   
-                    
-                   <!-- <p:panel header="Teste" style="margin-top:10px;">
-                        Login: <h:outputText value="#{usuario.login}"/><br/>
-                        #{label.senha} <h:outputText value="#{usuario.senha}"/>
-                    </p:panel>-->
-                </h:form>
-                </div>    
+                    <!-- Conteúdo da página aqui-->
+                </div>
             </div>
-            
             <div id="bottom"><!-- Não inserir conteúdo aqui --></div>    
         </div>
     </h:body>
 </html>
+

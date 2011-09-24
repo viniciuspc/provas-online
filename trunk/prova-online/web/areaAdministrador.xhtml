@@ -2,14 +2,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.prime.com.tr/ui">
+       xmlns:p="http://primefaces.prime.com.tr/ui">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/menu_style.css" />
+    
     <h:head>
-        <title>Login</title>
+        <title>Área do Administrador</title>
     </h:head>
     <h:body>
-       
         <div id="wrap">
             <div id="top"><!-- Não inserir conteúdo aqui --></div>
             <div id="content">
@@ -17,7 +17,7 @@
                 <div class="header">
                     <div id="logo"><img src="css/images/prova.png" /></div>    
                     <h1>Provas Online</h1>
-                    <h2>Restrito a Professores e Alunos</h2>
+                    <h2>Área do Administrador</h2>
                 </div>
                 <div class="breadcrumbs">
                     <div class="menu">
@@ -29,19 +29,6 @@
                                 <li><a href="" target="_self">#{label.professores}</a></li>
                                 <li><a href="" target="_self">#{label.administrador}</a></li>
                                 <li><a href="" target="_self">#{label.provas}</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="" target="_self" >#{label.professores}</a>
-                            <ul>
-                                <li><a href="" target="_self">#{label.cadastrarq}</a></li>
-                                <li><a href="" target="_self">#{label.nota_alunos}</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="" target="_self" >#{label.alunos}</a>
-                            <ul>
-                                <li><a href="" target="_self">#{label.fazer}</a></li>
-                                <li><a href="" target="_self">#{label.notas}</a></li>
                             </ul>
                         </li>
                         <li>
@@ -56,23 +43,11 @@
                     </div>    
                 </div>
                 <div>
-                <h:form>
-                    <p:panel header="Login" style="margin-bottom:10px;">
-                        Login: <p:inputText value="#{usuario.login}"/><br/>
-                        #{label.senha} <p:password value="#{usuario.senha}" minLength="3" feedback="false"/><br/>
-                        <p:commandButton value="#{label.enviar}" action="#{usuario.validaUsuario()}" ajax="false"  />
-                    </p:panel>
-                   
-                    
-                   <!-- <p:panel header="Teste" style="margin-top:10px;">
-                        Login: <h:outputText value="#{usuario.login}"/><br/>
-                        #{label.senha} <h:outputText value="#{usuario.senha}"/>
-                    </p:panel>-->
-                </h:form>
-                </div>    
+                    <!-- Conteúdo da página aqui talvez pode sser uma lista dos usuário cadastrados-->
+                </div>
             </div>
-            
             <div id="bottom"><!-- Não inserir conteúdo aqui --></div>    
         </div>
     </h:body>
 </html>
+
