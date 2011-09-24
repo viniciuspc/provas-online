@@ -67,7 +67,44 @@ public class usuario {
         u.setSenha(senha);
         u.setLogin(login);
         
-        return null;
+        //Aqui deveria ir buscar o usuário no banco e trazer o tipo do usuário
+        u.setTipo(obtemTipo());
+        
+        if(u.getTipo() == 1)
+            return "aluno";
+        else
+            if(u.getTipo() == 2)
+                return "prof";
+            else
+                if(u.getTipo() == 3)
+                    return "adm";
+                else
+                    return null;
     }
+    
+    /**
+     * Função desnescesária quando tiver conexão com banco
+     * Apeenas para testes
+     */
+    public int obtemTipo(){
+        if(this.getLogin().equals("aluno")){
+            return 1;
+        }
+        else{
+            if(this.getLogin().equals("professor")){
+                return 2;
+            }
+            else{
+                if(this.getLogin().equals("adm")){
+                    return 3;
+                }
+                else{
+                    return 0;
+                }
+            }
+        }
+            
+    }
+
     
 }
