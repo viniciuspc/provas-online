@@ -24,31 +24,31 @@
                         <li><a href="index.xhtml" target="_self" >Home</a>
                             <ul>
                                 <li><a href="index.xhtml" target="_self">Home</a></li>
-                                <li><a href="" target="_self">Alunos</a></li>
-                                <li><a href="" target="_self">Professores</a></li>
-                                <li><a href="" target="_self">Administrador</a></li>
-                                <li><a href="" target="_self">Provas</a></li>
+                                <li><a href="" target="_self">#{label.alunos}</a></li>
+                                <li><a href="" target="_self">#{label.professores}</a></li>
+                                <li><a href="" target="_self">#{label.administrador}</a></li>
+                                <li><a href="" target="_self">#{label.provas}</a></li>
                             </ul>
                         </li>
-                        <li><a href="" target="_self" >Professores</a>
+                        <li><a href="" target="_self" >#{label.professores}</a>
                             <ul>
-                                <li><a href="" target="_self">Cadastrar questões</a></li>
-                                <li><a href="" target="_self">Nota de alunos</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="" target="_self" >Alunos</a>
-                            <ul>
-                                <li><a href="" target="_self">Fazer prova</a></li>
-                                <li><a href="" target="_self">Verificar notas</a></li>
+                                <li><a href="" target="_self">#{label.cadastrarq}</a></li>
+                                <li><a href="" target="_self">#{label.nota_alunos}</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="" target="_self" >Administrador</a>
+                            <a href="" target="_self" >#{label.alunos}</a>
                             <ul>
-                                <li><a href="" target="_self">Cadastrar Usuário</a></li>
-                                <li><a href="" target="_self">Cadastrar Curso</a></li>
-                                <li><a href="" target="_self">Cadastrar Matéria</a></li>
+                                <li><a href="" target="_self">#{label.fazer}</a></li>
+                                <li><a href="" target="_self">#{label.notas}</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" target="_self" >#{label.administrador}</a>
+                            <ul>
+                                <li><a href="" target="_self">#{label.cadastraru}</a></li>
+                                <li><a href="" target="_self">#{label.cadastrarc}</a></li>
+                                <li><a href="" target="_self">#{label.cadastrarm}</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -58,14 +58,14 @@
                 <h:form>
                     <p:panel header="Login" style="margin-bottom:10px;">
                         Login: <p:inputText value="#{usuario.login}"/><br/>
-                        Senha: <p:password value="#{usuario.senha}" minLength="3" feedback="false"/><br/>
+                        #{label.senha} <p:password value="#{usuario.senha}" minLength="3" feedback="false"/><br/>
                          <p:commandButton value="Enviar" actionListener="#{usuario.validaUsuario()}" ajax="false" />
                     </p:panel>
                    
                     
                     <p:panel header="Teste" style="margin-top:10px;">
                         Login: <h:outputText value="#{usuario.login}"/><br/>
-                        Senha: <h:outputText value="#{usuario.senha}"/>
+                        #{label.senha} <h:outputText value="#{usuario.senha}"/>
                     </p:panel>
                 </h:form>
                 </div>    
