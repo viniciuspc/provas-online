@@ -432,3 +432,5 @@ java.io.IOException: Invalid argument
 Cleanup action completed
 Sun Sep 25 14:43:37 BRT 2011 Thread[DRDAConnThread_4,5,main] (DATABASE = provaonline?user=dbuser&password=DBUser4me...), (DRDAID = {14}), Failed to start database 'provaonline?user=dbuser&password=DBUser4me...' with class loader sun.misc.Launcher$AppClassLoader@27cb01e3, see the next exception for details.
 Sun Sep 25 14:43:37 BRT 2011 Thread[DRDAConnThread_4,5,main] (DATABASE = provaonline?user=dbuser&password=DBUser4me...), (DRDAID = {14}), Java exception: 'Invalid argument: java.io.IOException'.
+----------------------------------------------------------------
+Sun Sep 25 15:28:10 BRT 2011: Shutting down Derby engine
