@@ -5,10 +5,10 @@
 package br.com.fiap.prova.dao;
 
 /**
- * Classe responsavel pela execução de querys no banco de daodos
  *
- * @author Vinicius
+ * @author Leo
  */
-public class dao {
+public class DaoProva {
+
     
 }
