@@ -8,7 +8,7 @@ import br.com.fiap.prova.bean.usuarios.Usuario;
  *
  * @author Leonardo
  */
-public class DaoUsuario extends Dao {
+public class DaoUsuario extends SqlCore {
     private Usuario usuario;
      
     /*
