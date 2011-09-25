@@ -16,7 +16,7 @@ public class questao {
     /**
      * Define quanto essa questão vale na prova.
      */
-    public double peso;
+    private double peso;
 
     public ArrayList<alternativa> getAlternativas() {
         return alternativas;

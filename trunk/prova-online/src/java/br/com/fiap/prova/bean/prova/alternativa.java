@@ -9,11 +9,11 @@ package br.com.fiap.prova.bean.prova;
  * @author Vinicius
  */
 public class alternativa {
-    public String texto = "";
+    private String texto = "";
     /**
      * Define se é a alternativa correta
      */
-    public boolean correta = false;
+    private boolean correta = false;
 
     public boolean isCorreta() {
         return correta;
