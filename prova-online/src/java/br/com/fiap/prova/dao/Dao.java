@@ -24,6 +24,7 @@ public class Dao {
         }
         catch(Exception ex){
             //return false;
+            System,out.println("Erro ao abrir a conexão com o banco de dados.");
             throw ex;
         }
     }
@@ -32,6 +33,8 @@ public class Dao {
         try{
             cn.close();
         }
-        catch(Exception ex){}
+        catch(Exception ex){
+          System.out.println("Erro ao fechar a conexão com o banco de dados");
+        }
     }
 }
