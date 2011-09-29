@@ -6,7 +6,7 @@ package br.com.fiap.prova.dao;
 import java.sql.*;
 
 /**
- * Classe responsavel pela execução de querys no banco de daodos
+ * Classe responsavel pela conexao no banco de dados
  *
  * @author Leonardo
  */
