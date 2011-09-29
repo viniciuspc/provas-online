@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.fiap.prova.dao;
 import java.sql.*;
 
@@ -18,7 +14,7 @@ public class SqlCore {
 
     protected boolean abrir() throws Exception{
         try{
-            Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+            Class.forName("org.apache.derby.jdbc.ClientDriver");
             cn = DriverManager.getConnection("jdbc:derby://localhost:1527/provaonline?user=dbuser&password=DBUser4me...");
             return true;
         }
