@@ -4,6 +4,7 @@
  */
 package br.com.fiap.prova.bean.usuarios;
 
+import br.com.fiap.prova.dao.DaoUsuario;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -16,9 +17,27 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 
 public class Usuario {
-    private String login = "";
-    private String senha = "";
-    private String nome = "";
+    private String login;
+    private String senha;
+    private String nome;
+    private String tipoDescricao;
+
+    public String getTipoDescricao() {
+        if(this.getTipo() == 1){
+            return "Aluno";
+        } else if(this.getTipo() == 2){
+            return "Professor";
+        } else if(this.getTipo() == 3){
+            return "Adiministrador";
+        } else{
+            return tipoDescricao;
+        }
+        
+    }
+
+    public void setTipoDescricao(String tipoDescricao) {
+        this.tipoDescricao = tipoDescricao;
+    }
     
     /**
      * O id refere-se ao tipo de usuário
@@ -68,7 +87,7 @@ public class Usuario {
         u.setLogin(login);
         
         //Aqui deveria ir buscar o usuário no banco e trazer o tipo do usuário
-        u.setTipo(obtemTipo());
+        u.setTipo(new DaoUsuario().loginUsuario(u));
         
         if(u.getTipo() == 1)
             return "aluno";
@@ -105,6 +124,6 @@ public class Usuario {
         }
             
     }
-
     
+
 }

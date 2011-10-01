@@ -2,7 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-       xmlns:p="http://primefaces.prime.com.tr/ui">
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/menu_style.css" />
     
@@ -27,29 +29,64 @@
                     </p:panel>
                     
                     <!--Listar professores ou alunos no mesmo dataTable-->
+                    
                     <h:form>
-                        <p:dataGrid var="linha" value="#{usuario.listarUsuarios()}">
+                        <p:dataTable var="linha" value="#{usuarioCadastro.listarUsuarios()}">
+                            <f:facet name="header">#{label.listaUsuario}</f:facet>
                             <p:column>
-                                <h:inputText value="#{linha.login}" />
+                                <f:facet name="header">#{label.nome}</f:facet>
+                                <h:outputText value="#{linha.nome}" />
                             </p:column>
+
                             <p:column>
-                                <h:inputText value="#{linha.senha}" />
+                                <f:facet name="header">Login: </f:facet>
+                                <h:outputText value="#{linha.login}" />
                             </p:column>
+                            <!--<p:column>
+                                <h:outputText value="#{linha.senha}" />
+                            </p:column>-->
                             <p:column>
-                                <h:inputText value="#{linha.nome}" />
+                                <f:facet name="header">#{label.tipo}</f:facet>
+                                
+                                <h:outputText value="#{linha.tipoDescricao}" />
+                                
                             </p:column>
-                            <p:column>
-                                <h:inputText value="#{linha.tipo}" />
-                            </p:column>
-                            <p:column>
-                                <h:button value="Salvar" />
-                            </p:column>
-                    </p:dataGrid>
-                        <h:commandButton value="Salvar alterações" />    
-                        <h:commandButton value="Cancelar" />    
+                        </p:dataTable> 
                     </h:form>
                     
+                    
+                    
                 </div>
+                <div>
+                    <p:panel header="#{label.cadastraru}">
+                        <h:form prependId="false">
+                            <h:panelGrid columns="3" >
+                                #{label.nome} 
+                                <p:inputText value="#{usuarioCadastro.u.nome}" required="true" id="nome"/>
+                                <p:message for="nome"/>
+
+                                Login:
+                                <p:inputText value="#{usuarioCadastro.u.login}" required="true" id="login"/>
+                                <p:message for="login"/>
+
+                                #{label.senha}
+                                <p:password value="#{usuarioCadastro.u.senha}" minLength="3" feedback="true" id="senha" required="true"/>
+                                <p:message for="senha"/>
+                            </h:panelGrid>
+                            
+                            <p:dataTable var="tipo" value="#{usuarioCadastro.listaTipos}" selection="#{usuarioCadastro.tipoSelecionado}">
+                                <p:column selectionMode="single"/>
+                                <p:column headerText="Tipo de usuário">
+                                    <h:outputText value="#{tipo}"/>
+                                </p:column>
+                            </p:dataTable>
+                            <h:commandButton value="Cadastrar" action="#{usuarioCadastro.cadastrarUsuario()}"/>
+                            
+                        </h:form>
+
+                    </p:panel>
+                </div>
+                
             </div>
             <div id="bottom"><!-- Não inserir conteúdo aqui --></div>    
         </div>
