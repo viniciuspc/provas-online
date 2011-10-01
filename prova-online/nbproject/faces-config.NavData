@@ -2,12 +2,12 @@
 <Scene Scope="Project" version="2">
     <Scope Scope="Faces Configuration Only"/>
     <Scope Scope="Project">
-        <Node id="areaAdministrador.xhtml" x="567" y="305" zoom="true"/>
         <Node id="areaAluno.xhtml" x="46" y="308" zoom="true"/>
+        <Node id="areaAdministrador.xhtml" x="567" y="305" zoom="true"/>
         <Node id="css/index.html" x="59" y="53" zoom="true"/>
         <Node id="index.xhtml" x="317" y="169" zoom="false"/>
-        <Node id="areaProfessor.xhtml" x="290" y="305" zoom="true"/>
         <Node id="prova.xhtml" x="285" y="52" zoom="true"/>
+        <Node id="areaProfessor.xhtml" x="290" y="305" zoom="true"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
 </Scene>
