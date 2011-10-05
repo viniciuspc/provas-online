@@ -1,174 +1,22 @@
-Sat Oct 01 13:55:51 BRT 2011 : Apache Derby Servidor de Rede - 10.8.1.2 - (1095077) iniciado e pronto para aceitar conexões na porta 1527 em {3}
-Sat Oct 01 13:57:58 BRT 2011 Thread[DRDAConnThread_3,5,main] Cleanup action starting
-java.sql.SQLException: Falha ao iniciar o banco de dados 'provaonline?user=dbuser&password=DBUser4me...', consulte a próxima exceção para obter detalhes.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.sql.SQLException: Falha ao iniciar o banco de dados 'provaonline?user=dbuser&password=DBUser4me...', consulte a próxima exceção para obter detalhes.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 17 more
-Caused by: java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.javaException(Unknown Source)
-	... 14 more
-Caused by: java.io.IOException: Invalid argument
-	at java.io.WinNTFileSystem.canonicalize0(Native Method)
-	at java.io.Win32FileSystem.canonicalize(Win32FileSystem.java:396)
-	at java.io.File.getCanonicalPath(File.java:559)
-	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
-	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService$11.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 14 more
-============= begin nested exception, level (1) ===========
-java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.javaException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 17 more
-Caused by: java.io.IOException: Invalid argument
-	at java.io.WinNTFileSystem.canonicalize0(Native Method)
-	at java.io.Win32FileSystem.canonicalize(Win32FileSystem.java:396)
-	at java.io.File.getCanonicalPath(File.java:559)
-	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
-	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService$11.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 14 more
-============= end nested exception, level (1) ===========
-============= begin nested exception, level (2) ===========
-java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.javaException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.io.IOException: Invalid argument
-	at java.io.WinNTFileSystem.canonicalize0(Native Method)
-	at java.io.Win32FileSystem.canonicalize(Win32FileSystem.java:396)
-	at java.io.File.getCanonicalPath(File.java:559)
-	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
-	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService$11.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 14 more
-============= end nested exception, level (2) ===========
-============= begin nested exception, level (3) ===========
-java.io.IOException: Invalid argument
-	at java.io.WinNTFileSystem.canonicalize0(Native Method)
-	at java.io.Win32FileSystem.canonicalize(Win32FileSystem.java:396)
-	at java.io.File.getCanonicalPath(File.java:559)
-	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
-	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService$11.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-============= end nested exception, level (3) ===========
-Cleanup action completed
-Sat Oct 01 13:57:58 BRT 2011 Thread[DRDAConnThread_3,5,main] (DATABASE = provaonline?user=dbuser&password=DBUser4me...), (DRDAID = {1}), Falha ao iniciar o banco de dados 'provaonline?user=dbuser&password=DBUser4me...', consulte a próxima exceção para obter detalhes.
-Sat Oct 01 13:57:58 BRT 2011 Thread[DRDAConnThread_3,5,main] (DATABASE = provaonline?user=dbuser&password=DBUser4me...), (DRDAID = {1}), Exceção Java: 'Invalid argument: java.io.IOException'.
+Wed Oct 05 19:58:29 BRT 2011 : Apache Derby Servidor de Rede - 10.8.1.2 - (1095077) iniciado e pronto para aceitar conexões na porta 1527 em {3}
 ----------------------------------------------------------------
-Sat Oct 01 13:58:12 BRT 2011:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.8.1.2 - (1095077): instância a816c00e-0132-c069-c253-ffffb6bdb37e
-no diretório de banco de dados C:\Users\Vinicius\Documents\NetBeansProjects\provas_online\trunk\prova-online\DB\provaonline  
+Wed Oct 05 19:58:33 BRT 2011:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.8.1.2 - (1095077): instância a816c00e-0132-d64f-3a56-00001108bd1f
+no diretório de banco de dados C:\Users\Renan\Documents\NetBeansProjects\trunk\prova-online\DB\provaonline  
 
-java.vendor=Sun Microsystems Inc.
-java.runtime.version=1.6.0_23-b05
-user.dir=C:\Program Files\glassfish-3.1\db-derby-10.8.1.2-bin
-derby.system.home=C:\Users\Vinicius\Documents\NetBeansProjects\provas_online\trunk\prova-online\DB
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0-b147
+user.dir=C:\Users\Renan\Documents\NetBeansProjects\db-derby-10.8.1.2-bin
+derby.system.home=C:\Users\Renan\Documents\NetBeansProjects\trunk\prova-online\DB
 Carregador de classe do banco de dados iniciado - derby.database.classpath=''
-Sat Oct 01 13:59:11 BRT 2011 Thread[DRDAConnThread_4,5,main] Cleanup action starting
-java.sql.SQLException: Falha ao iniciar o banco de dados 'provaonline?user=dbuser&password=DBUser4me...', consulte a próxima exceção para obter detalhes.
+Wed Oct 05 19:58:34 BRT 2011 Thread[DRDAConnThread_3,5,main] (XID = 4848), (SESSIONID = 0), (DATABASE = provaonline), (DRDAID = {1}), Cleanup action starting
+java.sql.SQLNonTransientConnectionException: Connection authentication failure occurred.  Reason: Invalid authentication..
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
@@ -182,38 +30,20 @@ java.sql.SQLException: Falha ao iniciar o banco de dados 'provaonline?user=dbuse
 	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.sql.SQLException: Falha ao iniciar o banco de dados 'provaonline?user=dbuser&password=DBUser4me...', consulte a próxima exceção para obter detalhes.
+Caused by: java.sql.SQLException: Connection authentication failure occurred.  Reason: Invalid authentication..
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 17 more
-Caused by: java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.javaException(Unknown Source)
-	... 14 more
-Caused by: java.io.IOException: Invalid argument
-	at java.io.WinNTFileSystem.canonicalize0(Native Method)
-	at java.io.Win32FileSystem.canonicalize(Win32FileSystem.java:396)
-	at java.io.File.getCanonicalPath(File.java:559)
-	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
-	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService$11.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 14 more
+	... 19 more
 ============= begin nested exception, level (1) ===========
-java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
+java.sql.SQLException: Connection authentication failure occurred.  Reason: Invalid authentication..
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.javaException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
@@ -227,102 +57,17 @@ java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
 	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 17 more
-Caused by: java.io.IOException: Invalid argument
-	at java.io.WinNTFileSystem.canonicalize0(Native Method)
-	at java.io.Win32FileSystem.canonicalize(Win32FileSystem.java:396)
-	at java.io.File.getCanonicalPath(File.java:559)
-	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
-	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService$11.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 14 more
 ============= end nested exception, level (1) ===========
-============= begin nested exception, level (2) ===========
-java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.javaException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.io.IOException: Invalid argument
-	at java.io.WinNTFileSystem.canonicalize0(Native Method)
-	at java.io.Win32FileSystem.canonicalize(Win32FileSystem.java:396)
-	at java.io.File.getCanonicalPath(File.java:559)
-	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
-	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService$11.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 14 more
-============= end nested exception, level (2) ===========
-============= begin nested exception, level (3) ===========
-java.io.IOException: Invalid argument
-	at java.io.WinNTFileSystem.canonicalize0(Native Method)
-	at java.io.Win32FileSystem.canonicalize(Win32FileSystem.java:396)
-	at java.io.File.getCanonicalPath(File.java:559)
-	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
-	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService$11.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-============= end nested exception, level (3) ===========
 Cleanup action completed
-Sat Oct 01 13:59:11 BRT 2011 Thread[DRDAConnThread_4,5,main] (DATABASE = provaonline?user=dbuser&password=DBUser4me...), (DRDAID = {3}), Falha ao iniciar o banco de dados 'provaonline?user=dbuser&password=DBUser4me...', consulte a próxima exceção para obter detalhes.
-Sat Oct 01 13:59:11 BRT 2011 Thread[DRDAConnThread_4,5,main] (DATABASE = provaonline?user=dbuser&password=DBUser4me...), (DRDAID = {3}), Exceção Java: 'Invalid argument: java.io.IOException'.
-Sat Oct 01 15:11:01 BRT 2011 Thread[DRDAConnThread_4,5,main] Cleanup action starting
-java.sql.SQLException: Falha ao iniciar o banco de dados 'provaonline?user=dbuser&password=DBUser4me...', consulte a próxima exceção para obter detalhes.
+Wed Oct 05 19:58:34 BRT 2011 Thread[DRDAConnThread_3,5,main] (DATABASE = provaonline), (DRDAID = {1}), Connection authentication failure occurred.  Reason: Invalid authentication..
+Wed Oct 05 20:01:06 BRT 2011 Thread[DRDAConnThread_3,5,main] (XID = 4849), (SESSIONID = 1), (DATABASE = provaonline), (DRDAID = {2}), Cleanup action starting
+java.sql.SQLNonTransientConnectionException: Connection authentication failure occurred.  Reason: Invalid authentication..
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
@@ -336,38 +81,20 @@ java.sql.SQLException: Falha ao iniciar o banco de dados 'provaonline?user=dbuse
 	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.sql.SQLException: Falha ao iniciar o banco de dados 'provaonline?user=dbuser&password=DBUser4me...', consulte a próxima exceção para obter detalhes.
+Caused by: java.sql.SQLException: Connection authentication failure occurred.  Reason: Invalid authentication..
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 17 more
-Caused by: java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.javaException(Unknown Source)
-	... 14 more
-Caused by: java.io.IOException: Invalid argument
-	at java.io.WinNTFileSystem.canonicalize0(Native Method)
-	at java.io.Win32FileSystem.canonicalize(Win32FileSystem.java:396)
-	at java.io.File.getCanonicalPath(File.java:559)
-	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
-	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService$11.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 14 more
+	... 19 more
 ============= begin nested exception, level (1) ===========
-java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
+java.sql.SQLException: Connection authentication failure occurred.  Reason: Invalid authentication..
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.javaException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
@@ -381,93 +108,6 @@ java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
 	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 17 more
-Caused by: java.io.IOException: Invalid argument
-	at java.io.WinNTFileSystem.canonicalize0(Native Method)
-	at java.io.Win32FileSystem.canonicalize(Win32FileSystem.java:396)
-	at java.io.File.getCanonicalPath(File.java:559)
-	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
-	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService$11.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 14 more
 ============= end nested exception, level (1) ===========
-============= begin nested exception, level (2) ===========
-java.sql.SQLException: Exceção Java: 'Invalid argument: java.io.IOException'.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.javaException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.io.IOException: Invalid argument
-	at java.io.WinNTFileSystem.canonicalize0(Native Method)
-	at java.io.Win32FileSystem.canonicalize(Win32FileSystem.java:396)
-	at java.io.File.getCanonicalPath(File.java:559)
-	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
-	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService$11.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 14 more
-============= end nested exception, level (2) ===========
-============= begin nested exception, level (3) ===========
-java.io.IOException: Invalid argument
-	at java.io.WinNTFileSystem.canonicalize0(Native Method)
-	at java.io.Win32FileSystem.canonicalize(Win32FileSystem.java:396)
-	at java.io.File.getCanonicalPath(File.java:559)
-	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
-	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService$11.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
-	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-============= end nested exception, level (3) ===========
 Cleanup action completed
-Sat Oct 01 15:11:01 BRT 2011 Thread[DRDAConnThread_4,5,main] (DATABASE = provaonline?user=dbuser&password=DBUser4me...), (DRDAID = {4}), Falha ao iniciar o banco de dados 'provaonline?user=dbuser&password=DBUser4me...', consulte a próxima exceção para obter detalhes.
-Sat Oct 01 15:11:01 BRT 2011 Thread[DRDAConnThread_4,5,main] (DATABASE = provaonline?user=dbuser&password=DBUser4me...), (DRDAID = {4}), Exceção Java: 'Invalid argument: java.io.IOException'.
+Wed Oct 05 20:01:06 BRT 2011 Thread[DRDAConnThread_3,5,main] (DATABASE = provaonline), (DRDAID = {2}), Connection authentication failure occurred.  Reason: Invalid authentication..
