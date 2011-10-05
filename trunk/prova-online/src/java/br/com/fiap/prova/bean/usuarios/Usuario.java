@@ -21,6 +21,22 @@ public class Usuario {
     private String senha;
     private String nome;
     private String tipoDescricao;
+    private int id;
+    /**
+     * O id refere-se ao tipo de usuário
+     * 1-Aluno
+     * 2-Professor
+     * 3-Administrador
+     */
+    private int tipo = 0;
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getTipoDescricao() {
         if(this.getTipo() == 1){
@@ -39,13 +55,7 @@ public class Usuario {
         this.tipoDescricao = tipoDescricao;
     }
     
-    /**
-     * O id refere-se ao tipo de usuário
-     * 1-Aluno
-     * 2-Professor
-     * 3-Administrador
-     */
-    private int tipo = 0;
+    
 
     public int getTipo() {
         return tipo;
