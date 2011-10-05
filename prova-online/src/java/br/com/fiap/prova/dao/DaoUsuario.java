@@ -42,8 +42,7 @@ public class DaoUsuario {
                 usuario.setNome( rs.getString("nome") );
                 usuario.setSenha( rs.getString("senha") );
                 usuario.setTipo( rs.getInt("tipo") );
-                
-                
+                usuario.setId(rs.getInt("id"));
                 listaUsuarios.add(usuario);
 
                 i++;
