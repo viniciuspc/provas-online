@@ -35,21 +35,40 @@
                             <f:facet name="header">#{label.listaUsuario}</f:facet>
                             <p:column>
                                 <f:facet name="header">#{label.nome}</f:facet>
-                                <h:outputText value="#{linha.nome}" />
+                                <h:outputText value="#{linha.nome}" rendered="#{not usuarioCadastro.ativarEdicao(linha)}" />
+                                <h:inputText value="#{linha.nome}" rendered="#{usuarioCadastro.ativarEdicao(linha)}" />
                             </p:column>
 
                             <p:column>
                                 <f:facet name="header">Login: </f:facet>
-                                <h:outputText value="#{linha.login}" />
+                                <h:outputText value="#{linha.login}" rendered="#{not usuarioCadastro.ativarEdicao(linha)}" />
+                                <h:inputText value="#{linha.login}" rendered="#{usuarioCadastro.ativarEdicao(linha)}" />
                             </p:column>
-                            <!--<p:column>
-                                <h:outputText value="#{linha.senha}" />
-                            </p:column>-->
+                            <p:column >
+                                <f:facet name="header">#{label.senha}</f:facet>
+                                <h:inputText value="#{linha.senha}" rendered="#{usuarioCadastro.ativarEdicao(linha)}" />
+                            </p:column>
                             <p:column>
                                 <f:facet name="header">#{label.tipo}</f:facet>
                                 
-                                <h:outputText value="#{linha.tipoDescricao}" />
+                                <h:outputText value="#{linha.tipoDescricao}"/>
                                 
+                            </p:column>
+                            <p:column>
+                                <h:commandLink action="#{usuarioCadastro.editar(linha)}" rendered="#{not usuarioCadastro.ativarEdicao(linha)}">
+                                    <h:graphicImage value="./img/Editar.gif"/>
+                                </h:commandLink>
+                            <h:panelGroup rendered="#{usuarioCadastro.ativarEdicao(linha)}">
+                                <h:commandLink action="#{usuarioCadastro.cancelar(linha)}" >
+                                    <h:graphicImage value="./img/Cancelar.gif"/>
+                                </h:commandLink>
+                                <h:commandLink action="#{usuarioCadastro.salvar(linha)}">
+                                    <h:graphicImage value="./img/salvar.jpg"/>
+                                </h:commandLink>
+                                <h:commandLink action="#{usuarioCadastro.excluir(linha)}" >
+                                    <h:graphicImage value="./img/cancel_f2.png"/>
+                            </h:commandLink>
+                            </h:panelGroup>
                             </p:column>
                         </p:dataTable> 
                     </h:form>

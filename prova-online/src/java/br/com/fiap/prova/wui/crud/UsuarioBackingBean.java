@@ -6,6 +6,7 @@ import br.com.fiap.prova.dao.DaoUsuario;
 import java.util.ArrayList;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import sun.misc.UCDecoder;
 
 /**
  *
@@ -19,6 +20,7 @@ public class UsuarioBackingBean {
     
     private ArrayList<String> listaTipos = new ArrayList<String>();
     private String tipoSelecionado = "";
+    private Usuario tmp = new Usuario();
 
     public UsuarioBackingBean() {
         listaTipos.add("Aluno");
@@ -73,5 +75,44 @@ public class UsuarioBackingBean {
         u = new Usuario();
         
         return null;
+    }
+    
+    private Usuario usuarioEdicao = new Usuario();
+    public boolean ativarEdicao(Usuario avaliado){
+        return avaliado != null && avaliado.getId() == usuarioEdicao.getId();
+    }
+    
+    public String editar(Usuario selecao){
+        copia(this.tmp,selecao);
+        
+        
+        usuarioEdicao = selecao;
+        return null;
+    }
+    
+    public String salvar(Usuario u){
+        new DaoUsuario().atualizarUsuario(u);
+        this.usuarioEdicao = new Usuario();
+        return null;
+    }
+    
+    public String excluir(Usuario u){
+        new DaoUsuario().deletarUsuario(u);
+        return null;
+    }
+    
+    public String cancelar(Usuario u){
+        copia(u,tmp);
+        this.usuarioEdicao = new Usuario();
+        return null;
+    }
+    
+    public void copia(Usuario tmp, Usuario selecao){
+        tmp.setId(selecao.getId());
+        tmp.setLogin(selecao.getLogin());
+        tmp.setNome(selecao.getNome());
+        tmp.setSenha(selecao.getSenha());
+        tmp.setTipo(selecao.getTipo());
+        tmp.setTipoDescricao(selecao.getTipoDescricao());
     }
 }

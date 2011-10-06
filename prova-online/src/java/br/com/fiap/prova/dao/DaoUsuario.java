@@ -134,6 +134,65 @@ public class DaoUsuario {
         
     }
     
+    
+    public void atualizarUsuario (Usuario u){
+         Connection conexao = null;
+        try{
+            conexao = gerenciador.abrir();
+            
+            PreparedStatement ps = conexao.prepareStatement("update usuario set login=?, senha = ?, nome=?, tipo=? where id=? ");
+            ps.setString(1, u.getLogin());
+            ps.setString(2, u.getSenha());
+            ps.setString(3, u.getNome());
+            ps.setInt(4, u.getTipo());
+            ps.setInt(5, u.getId());
+
+            ps.executeUpdate();
+            
+        }
+        catch(SQLException ex){
+            System.out.println("Erro ao alterar usuario");
+            ex.printStackTrace();
+        }
+        finally{
+           if(conexao != null){
+                try {
+                    conexao.close();
+                } catch (SQLException ex) {
+                    System.out.println("Erro ao fechar conexao" + ex);
+                    ex.printStackTrace();
+                }
+           }
+        }
+    }
+    
+    public void deletarUsuario (Usuario u){
+         Connection conexao = null;
+        try{
+            conexao = gerenciador.abrir();
+            
+            PreparedStatement ps = conexao.prepareStatement("delete from usuario where id=? ");
+            ps.setInt(1, u.getId());
+
+            ps.executeUpdate();
+            
+        }
+        catch(SQLException ex){
+            System.out.println("Erro ao alterar usuario");
+            ex.printStackTrace();
+        }
+        finally{
+           if(conexao != null){
+                try {
+                    conexao.close();
+                } catch (SQLException ex) {
+                    System.out.println("Erro ao fechar conexao" + ex);
+                    ex.printStackTrace();
+                }
+           }
+        }
+    }
+    
     public ArrayList<Usuario> procuraUsuario(){
         ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
        
